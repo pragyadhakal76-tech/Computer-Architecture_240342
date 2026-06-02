@@ -83,3 +83,18 @@ To verify a design before it is physically implemented, it must pass through the
 Analysis (Compilation): The compiler checks the source code for syntax errors and ensures it follows language rules. Elaboration: The hierarchical design is “flattened” into a netlist. The simulator binds entities to architectures and connects all signals. Simulation: Stimuli (inputs) are applied to the design to verify its functional behavior over time. Visual Verification: Tools like GTKWave read the generated VCD (Value Change Dump) file to display the timing diagrams of the signals.
 
 
+## Key Observations:
+
+Design: The entity defined the input (A) and output (Y) ports. The architecture followed a dataflow model where the output continuously mirrored the input.
+Verification: The testbench applied a stimulus (0 → 1 → 0) to ensure the output remained synchronized with the input.
+Visualization: We generated a .vcd file and used GTKWave to visually confirm that the signal transitions were correct.
+This process illustrated the essential stages of compilation, elaboration, and simulation necessary for validating a design before hardware implementation.
+
+
+## CONCLUSION ;
+  This lab provided a practical introduction to VHDL and the simulation lifecycle. We successfully learned how to:
+
+Configure the GHDL and GTKWave toolchain.
+Write VHDL design files and their corresponding testbenches.
+Run simulations and analyze signal transitions through waveforms.
+The simulation confirmed that the buffer circuit works as intended. This exercise establishes a solid foundation for designing more complex behavioral and structural models in future labs.
