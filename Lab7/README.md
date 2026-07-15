@@ -13,38 +13,45 @@ D: Eliminates ambiguity by sampling a single data line, making it perfect for CP
 JK: Resolves the SR invalid state by adding cross-coupled feedback to toggle safely.
 T: Efficiently isolates the toggle feature, serving as the core building block for binary counters and clock dividers.
 ## Truth Tables
-#  SR Flip-Flop
-+---+---+--------+-----------+
-| S | R | Q(next)| State     |
-+---+---+--------+-----------+
-| 0 | 0 | Q      | Hold      |
-| 0 | 1 | 0      | Reset     |
-| 1 | 0 | 1      | Set       |
-| 1 | 1 | X      | Forbidden |
-+---+---+--------+-----------+
-# D Flip-Flop
-+---+--------+--------+
-| D | Q(next)| State  |
-+---+--------+--------+
-| 0 | 0      | Reset  |
-| 1 | 1      | Set    |
-+---+--------+--------+
-# JK Flip-Flop
-+---+---+--------+----------+
-| J | K | Q(next)| State    |
-+---+---+--------+----------+
-| 0 | 0 | Q      | Hold     |
-| 0 | 1 | 0      | Reset    |
-| 1 | 0 | 1      | Set      |
-| 1 | 1 | not Q  | Toggle   |
-+---+---+--------+----------+
-# T Flip-Flop
-+---+--------+----------+
-| T | Q(next)| State    |
-+---+--------+----------+
-| 0 | Q      | Hold     |
-| 1 | not Q  | Toggle   |
-+---+--------+----------+
+# Flip-Flop Truth Tables
+
+## SR Flip-Flop
+
+| S | R | Q(next) | State |
+|---|---|---------|-------|
+| 0 | 0 | Q | Hold |
+| 0 | 1 | 0 | Reset |
+| 1 | 0 | 1 | Set |
+| 1 | 1 | X | Forbidden |
+
+---
+
+## D Flip-Flop
+
+| D | Q(next) | State |
+|---|---------|-------|
+| 0 | 0 | Reset |
+| 1 | 1 | Set |
+
+---
+
+## JK Flip-Flop
+
+| J | K | Q(next) | State |
+|---|---|---------|-------|
+| 0 | 0 | Q | Hold |
+| 0 | 1 | 0 | Reset |
+| 1 | 0 | 1 | Set |
+| 1 | 1 | Not Q | Toggle |
+
+---
+
+## T Flip-Flop
+
+| T | Q(next) | State |
+|---|---------|-------|
+| 0 | Q | Hold |
+| 1 | Not Q | Toggle |
 ## Output
 ![alt text](image.png)
 
