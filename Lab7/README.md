@@ -13,7 +13,7 @@ D: Eliminates ambiguity by sampling a single data line, making it perfect for CP
 JK: Resolves the SR invalid state by adding cross-coupled feedback to toggle safely.
 T: Efficiently isolates the toggle feature, serving as the core building block for binary counters and clock dividers.
 ## Truth Tables
-1. SR Flip-Flop
+#  SR Flip-Flop
 +---+---+--------+-----------+
 | S | R | Q(next)| State     |
 +---+---+--------+-----------+
@@ -22,14 +22,14 @@ T: Efficiently isolates the toggle feature, serving as the core building block f
 | 1 | 0 | 1      | Set       |
 | 1 | 1 | X      | Forbidden |
 +---+---+--------+-----------+
-2. D Flip-Flop
+# D Flip-Flop
 +---+--------+--------+
 | D | Q(next)| State  |
 +---+--------+--------+
 | 0 | 0      | Reset  |
 | 1 | 1      | Set    |
 +---+--------+--------+
-3. JK Flip-Flop
+# JK Flip-Flop
 +---+---+--------+----------+
 | J | K | Q(next)| State    |
 +---+---+--------+----------+
@@ -38,7 +38,7 @@ T: Efficiently isolates the toggle feature, serving as the core building block f
 | 1 | 0 | 1      | Set      |
 | 1 | 1 | not Q  | Toggle   |
 +---+---+--------+----------+
-4. T Flip-Flop
+# T Flip-Flop
 +---+--------+----------+
 | T | Q(next)| State    |
 +---+--------+----------+
@@ -46,7 +46,7 @@ T: Efficiently isolates the toggle feature, serving as the core building block f
 | 1 | not Q  | Toggle   |
 +---+--------+----------+
 ## Output
-![alt text](<Screenshot 2026-07-14 214343.png>)
+![alt text](image.png)
 
 ## Discussion
 Clock Synchronization: All designs rely on rising_edge(CLK) to update the internal state Q_int, ensuring stable transitions.
