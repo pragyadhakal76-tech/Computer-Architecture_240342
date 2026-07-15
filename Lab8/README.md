@@ -12,7 +12,7 @@ Up counter: Increments the count by 1 on each clock edge.
 Up/Down counter: Increments or decrements based on a direction control signal.
 Reset: An active-high synchronous or asynchronous reset returns the count to zero.
 ## Output
-![alt text](<Screenshot 2026-07-15 221609.png>)
+![alt text](image.png)
 
 ## Discussion and conclusion
 In this laboratory exercise, 4-bit synchronous up and up/down counters were successfully designed, modeled, and analyzed using VHDL behavioral descriptions. Additionally, the lab successfully contrasted asynchronous and synchronous reset patterns, highlighting their distinct impacts on circuit behavior and synchronization.
